@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.music.vk_api.MainActivity">
+    tools:context="com.example.music.vk_api.screens.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -13,46 +13,37 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="@string/number_of_students"
-                android:id="@+id/input"
-                android:inputType="numberDecimal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <Button
+                android:id="@+id/addButton"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add"/>
 
-        <Button
-            android:id="@+id/calculateButton"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/calculate"
-            android:visibility="visible"/>
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"/>
 
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send_button"
-            android:visibility="invisible" />
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_button"/>
 
         </LinearLayout>
 
         <ListView
-            android:id="@+id/listViewOut"
+            android:id="@+id/namesListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
