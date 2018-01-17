@@ -40,7 +40,8 @@ public interface BasicStudentsInfo {
             "Шляхова Анастасия Алексеевна"
     }));
 
-    HashSet<String> idesImpl = new HashSet<String>(Arrays.asList(new String[]{"id333524188",
+    HashSet<String> idesImpl = new HashSet<String>(Arrays.asList(new String[]{
+            "id333524188",
             "id336653500",
             "id164525908",
             "id142932525",
@@ -64,7 +65,6 @@ public interface BasicStudentsInfo {
             "nastya_sarnova",
             "id137244882",
             "id244125841",
-            "id139398744",
             "klubnika_99",
             "id166802733",
             "id232689543"

@@ -9,6 +9,15 @@ import java.util.Set;
 public class Students {
     private static Set<String> names;
     private static Set<String> ides;
+    private static Set<String> vkIdes;
+
+    public static Set<String> getVkIdes() {
+        return vkIdes;
+    }
+
+    public static void setVkIdes(Set<String> vkIdes) {
+        Students.vkIdes = vkIdes;
+    }
 
     public static Set<String> getNames() {
         return names;
