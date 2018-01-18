@@ -211,6 +211,8 @@ public class MainActivity extends AppCompatActivity implements BasicStudentsInfo
 
         vkIdes = Students.getVkIdes();
 
+        initMessage();
+
         for (String vkId : vkIdes) {
             VKRequest request = new VKRequest(
                     "messages.send",
@@ -235,6 +237,17 @@ public class MainActivity extends AppCompatActivity implements BasicStudentsInfo
             }
         }
 
+    }
+
+    private void initMessage() {
+        Set<String> names = Students.getNames();
+        int i=0;
+        String tempMessage = "";
+        for (String name : names) {
+            tempMessage += name + " - " + result[i] + "th" + '\n';
+            i++;
+        }
+        message = tempMessage;
     }
 
     private void initVkIdes(){
@@ -333,8 +346,6 @@ public class MainActivity extends AppCompatActivity implements BasicStudentsInfo
              String[] out = new String[result.length];
              for (int i = 0; i < result.length; i++) {
                  out[i] = names[i] + " - " + result[i] + "th";
-                 String tempMessage = message;
-                 message = tempMessage + out[i] + '\n';
              }
              ArrayAdapter<String> adapter1 = new ArrayAdapter<>(
                      this,
